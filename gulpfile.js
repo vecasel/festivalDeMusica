@@ -1,8 +1,10 @@
 const {src, dest, watch} = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const plumber = require("gulp-plumber");
 
 function css(callback){
-    src("src/scss/app.scss")
+    src("src/scss/**/*.scss")
+        .pipe(plumber())
         .pipe(sass())
         .pipe(dest("build/css"));
 
@@ -10,7 +12,7 @@ function css(callback){
 }
 
 function dev(callback){
-    watch("src/scss/app.scss", css);
+    watch("src/scss/**/*.scss", css);
 
     callback();
 }
