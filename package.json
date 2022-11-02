@@ -1,0 +1,30 @@
+{
+  "name": "musicfestival",
+  "version": "1.0.0",
+  "description": "proyect with Gulp, SASS, and HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vecasel/festivalDeMusica.git"
+  },
+  "keywords": [
+    "GULP",
+    "SASS",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+  "author": "Daniel Velásquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vecasel/festivalDeMusica/issues"
+  },
+  "homepage": "https://github.com/vecasel/festivalDeMusica#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.55.0"
+  }
+}
