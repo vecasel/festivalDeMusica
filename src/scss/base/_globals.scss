@@ -12,6 +12,9 @@ html{
 body{
     font-size: 16px;
     font-family: v.$main_source;
+    &.body-pin{
+        overflow: hidden;
+    }
 }
 p{
     font-size: 2rem;
@@ -40,5 +43,7 @@ h3{
 }
 img{
     max-width: 100%;
+    width: 100%;
+    height: auto;
     display: block;
 }

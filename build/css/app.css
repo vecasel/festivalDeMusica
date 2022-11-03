@@ -321,6 +321,9 @@ body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
+body.body-pin {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -356,6 +359,8 @@ h3 {
 
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -420,6 +425,12 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .video .overlay {
+    text-align: left;
+  }
 }
 .video video {
   width: auto;
@@ -434,7 +445,12 @@ img {
 .video-content h2 {
   color: #fff;
   font-size: 7rem;
-  margin: 0;
+  margin: 0 0 10rem 0;
+}
+@media (min-width: 992px) {
+  .video-content h2 {
+    margin: 0;
+  }
 }
 .video-content p {
   background-color: #f53756;
@@ -453,7 +469,7 @@ img {
   .about-festival {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    gap: 5rem;
   }
 }
 
@@ -461,6 +477,12 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .content-festival {
+    margin-top: 0;
+  }
 }
 .content-festival h2 {
   margin-bottom: 2rem;
@@ -469,4 +491,144 @@ img {
   color: #f53756;
   margin-bottom: 2rem;
   font-weight: 700;
+}
+
+.lineup {
+  background-color: #f53756;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #fff;
+}
+.lineup .day {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .sceneries-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.sceneries-container p {
+  color: #000;
+}
+.sceneries-container .scenery {
+  padding-top: 2rem;
+}
+.sceneries-container .scenery p:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .scenery-name:after {
+  background-image: url("../img/icono_edm.png");
+}
+
+.rock .scenery-name:after {
+  background-image: url("../img/icono_rock.png");
+}
+
+.calendar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendar li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendar li span {
+  font-weight: 400;
+}
+
+.yellow-bg {
+  background-color: #fef46d;
+}
+.yellow-bg li:nth-child(odd) {
+  background-color: #fdec08;
+}
+
+.green-bg {
+  background-color: #4cb8b3;
+}
+.green-bg li:nth-child(odd) {
+  background-color: #3b9691;
+}
+
+.galery {
+  padding: 5rem;
+}
+.galery h3 {
+  text-align: center;
+}
+
+.images-galery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  .images-galery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .images-galery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .images-galery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay picture {
+  display: block;
+  max-width: 80rem;
+}
+
+.close-button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.close-button:hover {
+  cursor: pointer;
 }

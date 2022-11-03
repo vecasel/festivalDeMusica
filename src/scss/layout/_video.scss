@@ -16,6 +16,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
+        @include m.desktop {
+            text-align: left;
+        }
     }
     video{
         width: auto;
@@ -29,7 +33,10 @@
     h2{
         color: v.$white;
         font-size: 7rem;
-        margin: 0;
+        margin: 0 0 10rem 0;
+        @include m.desktop {
+            margin: 0;
+        }
     }
     p{
         background-color: v.$pink;
